@@ -11,9 +11,7 @@
 ### Sobre o ambiente da aplicação:
 
 -   Você deve utilizar o framework Fastify em um projeto com Node.JS para implementação deste desafio.
-
 -   Tente evitar usar muito métodos mágicos ou atalhos já prontos, como bibliotecas, boilerplates e trechos de códigos pronto. Sabemos que essas facilidades aumentam a produtividade no dia-a-dia mas aqui queremos ver o **seu** código e a sua forma de resolver problemas.
-
 -   Valorizamos uma boa estrutura de containeres criada por você.
 
 ## Para o dia da entrevista técnica
@@ -28,19 +26,16 @@ Temos 2 tipos de usuários, os comuns e lojistas, ambos têm carteira com dinhei
 Requisitos:
 
 -   Para ambos tipos de usuário, precisamos do Nome Completo, CPF, e-mail e Senha. CPF/CNPJ e e-mails devem ser únicos no sistema. Sendo assim, seu sistema deve permitir apenas um cadastro com o mesmo CPF ou endereço de e-mail;
-
 -   Usuários podem enviar dinheiro (efetuar transferência) para lojistas e entre usuários;
-
 -   Lojistas **só recebem** transferências, não enviam dinheiro para ninguém;
-
 -   Validar se o usuário tem saldo antes da transferência;
-
--   Antes de finalizar a transferência, deve-se consultar um serviço autorizador externo. Crie um mock para essa consulta que deve retornar aleatóriamente se foi autorizado ou não;
-
+-   Antes de finalizar a transferência, deve-se consultar um serviço autorizador externo. Utilize esse mock https://run.mocky.io/v3/687d8d61-5961-4d70-8309-dc672c64c28d para simular a resposta (permita que a URL deste mock seja alterada facilmente, sem edições no codigo-fonte);
+    - Eventualmente este serviço pode estar indisponível/instável;
+    - Transações podem ser negadas.
 -   A operação de transferência deve ser uma transação (ou seja, revertida em qualquer caso de inconsistência) e o dinheiro deve voltar para a carteira do usuário que envia;
-
--   No recebimento de pagamento, o usuário ou lojista precisa receber notificação (envio de email, sms) enviada por um serviço de terceiro e eventualmente este serviço pode estar indisponível/instável. Crie um mock para esse envio que deve retornar aleatóriamente se foi enviado ou não;
-
+-   No recebimento de pagamento, o usuário ou lojista precisa receber notificação (envio de email, sms) enviada por um serviço de terceiro. Simule o envio neste mock https://run.mocky.io/v3/5698031f-e0d3-4ee3-a401-1eb9125b1144 (permita que a URL deste mock seja alterada facilmente, sem edições no codigo-fonte);
+    - Eventualmente este serviço pode estar indisponível/instável;
+    - Transações podem ser negadas.
 -   Este serviço deve ser RESTFul.
 
 ### Payload
@@ -66,7 +61,7 @@ A correção qualitativa será durante a entrevista e levará em conta os seguin
 ## O que será avaliado e valorizamos :heart:
 
 -   Documentação;
--   Se for para vaga sênior, foque bastante no **desenho de arquitetura**;
+-   Foque bastante no **desenho de arquitetura** com diagramas UML no repositório e um arquivo OpenAPIv3 para a interface da API;
 -   Código limpo e organizado (nomenclatura, etc);
 -   Conhecimento de padrões (PSRs, design patterns, SOLID);
 -   Ser consistente e saber argumentar suas escolhas;
