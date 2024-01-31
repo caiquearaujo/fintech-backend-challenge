@@ -10,7 +10,7 @@
 
 ### Sobre o ambiente da aplicação:
 
--   Você deve utilizar o framework Fastify em um projeto com Node.JS para implementação deste desafio.
+-   Você deve utilizar o framework Fastify em um projeto com Node.JS & TypeScript para implementação deste desafio.
 -   Tente evitar usar muito métodos mágicos ou atalhos já prontos, como bibliotecas, boilerplates e trechos de códigos pronto. Sabemos que essas facilidades aumentam a produtividade no dia-a-dia mas aqui queremos ver o **seu** código e a sua forma de resolver problemas.
 -   Valorizamos uma boa estrutura de containeres criada por você.
 
